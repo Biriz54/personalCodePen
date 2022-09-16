@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>👨‍💻about:blank👨‍💻</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script>
+      function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+      }
+    </script>
+
+  </head>
+  <body>
+    <div class="w3-container codingZone">
+      <div class="w3-row">
+          <div class="coddingArea w3-col m4">
+            <textarea class='input-textarea' id="textAreaElementHTML" placeholder='HTML zone'></textarea>
+          </div>
+
+          <div class="coddingArea w3-col m4">
+            <textarea class='input-textarea' id="textAreaElementCSS" placeholder='CSS zone'></textarea>
+          </div>
+          <div class="coddingArea w3-col m4">
+            <textarea class='input-textarea' id="textAreaElementJS" placeholder='JavaScrpit zone'></textarea>
+          </div>
+        </div>
+    </div>
+    <div class="buttonGroup">
+      <button type="button" class=" w3-button w3-black" id="buttonToRender">Render</button>
+      <button type="button" class=" w3-button w3-black" id="buttonClearAreas">Clear Text Areas</button>
+      <button type="button" class=" w3-button w3-black" id="buttonClearOutput">Clear Output</button>
+      <button type="button" class=" w3-button w3-black" id="buttonShowExample">Show Examples</button>
+    </div>
+
+    <div class="iframeContainer">
+      <iframe class="htmlZone" id="htmlZone"></iframe>
+    </div>
+
+    <script src="./innerHTML.js"></script>
+    <script src="./jshelper.js"></script>
+  </body>
+</html>

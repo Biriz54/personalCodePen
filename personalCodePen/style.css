@@ -1,0 +1,35 @@
+.codingZone {
+  margin-right:10px;
+  width: 100%;
+
+}
+.coddingArea{
+  margin-top: 25px;
+  width: 100%;
+  padding: 5px;
+}
+
+.buttonGroup{
+  margin: 30px;
+
+}
+
+.htmlZone{
+  width:  100%;
+  height: 600px;
+  border: 2px solid black;
+}
+
+.iframeConainer{
+  margin: 10px;
+  padding: 5px;
+  width: 100%;
+}
+
+.input-textarea{
+  color: green;
+  background-color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+  width: 100%;
+  height: 500px;
+}

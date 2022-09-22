@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faplus } from '@fortawesome/free-solid-svg-icons'
 
-function App() {
+
+function RenderItemsList() {
+  const itemsList = [{
+    item: 'bananas',
+    quantity: 2,
+    crossed: false,
+  }];
+    const plusSign = <FontAwesomeIcon icon={faplus} />
+  const list = itemsList.map((e) => {
+      return (
+        <ul>
+          <li>{e.item}<button>{plusSign}</button>{e.quantity}<button>-</button><button>del</button></li>
+        </ul>
+      )
+    }
+  )
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {list}
     </div>
-  );
+  )
+}
+class ShoppingList extends React.Component {
+  render() {
+    return (
+      <div className="listApp">
+    <h1>Shopping List</h1>
+  <form>
+    <label>Add Stuff:<br />
+    <input type="text" /> 
+    <button className="addBtn">Add</button>
+    </label>
+  </form>
+  <div className="listItems">
+    <RenderItemsList />
+  </div>
+  </div>
+    );
+  }
 }
 
-export default App;
+export default ShoppingList;
